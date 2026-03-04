@@ -630,19 +630,18 @@
     <div class="content stagger">
       <div class="slide-title-bar">
         <div class="num-pill">Bước 2</div>
-        <h2>Hàm <span class="highlight">tongchuso()</span></h2>
+        <h2>Hàm <span class="highlight">tongchuso()</span> — Giải Thích Từng Dòng</h2>
       </div>
 
       <div class="two-col">
         <div>
-          <div class="terminal" style="margin-bottom:16px">
+          <div class="terminal">
             <div class="terminal-bar">
               <div class="circle r"></div><div class="circle y"></div><div class="circle g"></div>
               <div class="title">tongchuso.py</div>
             </div>
             <div class="terminal-body">
 <pre><span class="kw">def</span> <span class="fn">tongchuso</span><span class="paren">(</span><span class="var">xau</span><span class="paren">)</span>:
-    <span class="cmt"># Đếm số ký tự là chữ số</span>
     <span class="var">tong</span> = <span class="num">0</span>
     <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="var">xau</span>:
         <span class="kw">if</span> <span class="var">i</span> >= <span class="str">'0'</span> <span class="kw">and</span> <span class="var">i</span> <= <span class="str">'9'</span>:
@@ -650,71 +649,40 @@
     <span class="kw">return</span> <span class="var">tong</span></pre>
             </div>
           </div>
-
-          <div class="card cyan">
-            <h4>Điều Kiện Lọc Chữ Số</h4>
-            <p style="font-size:13px; margin-bottom:8px">Kiểm tra ký tự nằm trong khoảng:</p>
-            <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap">
-              <span class="tag" style="font-size:15px;padding:4px 12px">'0'</span>
-              <span style="color:var(--muted)">≤</span>
-              <span class="tag" style="color:var(--yellow);font-size:15px;padding:4px 12px">i</span>
-              <span style="color:var(--muted)">≤</span>
-              <span class="tag" style="font-size:15px;padding:4px 12px">'9'</span>
-              <span style="font-size:13px;color:var(--green)">→ đếm +1</span>
-            </div>
-            <p style="margin-top:10px; font-size:13px; color:var(--muted)">
-              So sánh theo mã ASCII: '0'=48, '9'=57
-            </p>
-          </div>
         </div>
 
-        <div>
-          <div class="card" style="margin-bottom:16px">
-            <h4 style="color:var(--yellow)">Minh Họa Từng Bước</h4>
-            <p style="font-size:13px;margin-bottom:10px">Xâu: <span class="tag" style="color:var(--yellow)">"a3b7!"</span></p>
-            <div style="display:flex;flex-direction:column;gap:8px">
-              <div style="display:flex;align-items:center;gap:10px;background:var(--surface2);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'JetBrains Mono',monospace">
-                <div class="char-box alpha" style="width:32px;height:32px;font-size:14px">a</div>
-                <span style="color:var(--muted)">→ <span style="color:var(--pink)">Không phải số</span> → tong=0</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;background:var(--surface2);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'JetBrains Mono',monospace">
-                <div class="char-box digit" style="width:32px;height:32px;font-size:14px">3</div>
-                <span style="color:var(--muted)">→ <span style="color:var(--green)">Là chữ số!</span> → tong=1</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;background:var(--surface2);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'JetBrains Mono',monospace">
-                <div class="char-box alpha" style="width:32px;height:32px;font-size:14px">b</div>
-                <span style="color:var(--muted)">→ <span style="color:var(--pink)">Không phải số</span> → tong=1</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;background:var(--surface2);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'JetBrains Mono',monospace">
-                <div class="char-box digit" style="width:32px;height:32px;font-size:14px">7</div>
-                <span style="color:var(--muted)">→ <span style="color:var(--green)">Là chữ số!</span> → tong=2</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;background:rgba(0,255,136,0.06);border:1px solid rgba(0,255,136,0.2);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'JetBrains Mono',monospace">
-                <span style="color:var(--green)">return</span> <span style="color:var(--yellow);margin-left:4px">2</span>
-              </div>
-            </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+
+          <div style="background:var(--surface);border:1px solid rgba(0,229,255,0.2);border-left:3px solid var(--cyan);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);margin-bottom:6px">def tongchuso(xau):</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Khai báo một <strong style="color:var(--cyan)">hàm</strong> tên là <span class="tag">tongchuso</span>. Hàm nhận vào một <strong>tham số</strong> là <span class="tag">xau</span> — đây là xâu ký tự mà ta muốn đếm.</p>
           </div>
 
-          <div class="card green">
-            <h4>Bảng ASCII Chữ Số</h4>
-            <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:4px">
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">ký tự</div>
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">code</div>
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">ký tự</div>
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">code</div>
-              <div></div>
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--green)">'0'</div>
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--cyan)">48</div>
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--green)">'5'</div>
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--cyan)">53</div>
-              <div></div>
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--green)">'1'</div>
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--cyan)">49</div>
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--green)">'9'</div>
-              <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--cyan)">57</div>
-              <div></div>
-            </div>
+          <div style="background:var(--surface);border:1px solid rgba(0,255,136,0.2);border-left:3px solid var(--green);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green);margin-bottom:6px">tong = 0</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Tạo biến <span class="tag">tong</span> và gán bằng <strong>0</strong>. Đây là bộ đếm — ban đầu chưa đếm được gì nên bắt đầu từ 0.</p>
           </div>
+
+          <div style="background:var(--surface);border:1px solid rgba(255,215,0,0.2);border-left:3px solid var(--yellow);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--yellow);margin-bottom:6px">for i in xau:</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Vòng lặp <span class="tag">for</span> duyệt qua từng ký tự trong xâu. Mỗi lần lặp, biến <span class="tag">i</span> sẽ là <strong>một ký tự</strong> trong xâu.</p>
+          </div>
+
+          <div style="background:var(--surface);border:1px solid rgba(255,77,166,0.2);border-left:3px solid var(--pink);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--pink);margin-bottom:6px">if i >= '0' and i <= '9':</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Kiểm tra xem ký tự <span class="tag">i</span> có phải chữ số không. Nếu <span class="tag">i</span> nằm trong khoảng từ <span class="tag">'0'</span> đến <span class="tag">'9'</span> thì đúng là chữ số.</p>
+          </div>
+
+          <div style="background:var(--surface);border:1px solid rgba(0,255,136,0.2);border-left:3px solid var(--green);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green);margin-bottom:6px">tong = tong + 1</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Nếu điều kiện trên đúng thì tăng bộ đếm lên 1. Ví dụ: <span class="tag">tong</span> đang là 2 → thành 3.</p>
+          </div>
+
+          <div style="background:var(--surface);border:1px solid rgba(0,229,255,0.2);border-left:3px solid var(--cyan);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);margin-bottom:6px">return tong</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Trả về kết quả đếm được. Sau khi duyệt hết xâu, <span class="tag">tong</span> chính là tổng số chữ số.</p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -725,19 +693,18 @@
     <div class="content stagger">
       <div class="slide-title-bar">
         <div class="num-pill" style="border-color:rgba(0,255,136,0.3);color:var(--green);">Bước 3</div>
-        <h2>Hàm <span class="highlight-g">tongchucai()</span></h2>
+        <h2>Hàm <span class="highlight-g">tongchucai()</span> — Giải Thích Từng Dòng</h2>
       </div>
 
       <div class="two-col">
         <div>
-          <div class="terminal" style="margin-bottom:16px">
+          <div class="terminal">
             <div class="terminal-bar">
               <div class="circle r"></div><div class="circle y"></div><div class="circle g"></div>
               <div class="title">tongchucai.py</div>
             </div>
             <div class="terminal-body">
 <pre><span class="kw">def</span> <span class="fn">tongchucai</span><span class="paren">(</span><span class="var">xau</span><span class="paren">)</span>:
-    <span class="cmt"># Đếm số ký tự là chữ cái A-Z, a-z</span>
     <span class="var">tong</span> = <span class="num">0</span>
     <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="var">xau</span>:
         <span class="kw">if</span> <span class="paren">(</span><span class="var">i</span> >= <span class="str">'a'</span> <span class="kw">and</span> <span class="var">i</span> <= <span class="str">'z'</span><span class="paren">)</span> \
@@ -746,75 +713,40 @@
     <span class="kw">return</span> <span class="var">tong</span></pre>
             </div>
           </div>
-
-          <div class="card green">
-            <h4>Hai Điều Kiện OR</h4>
-            <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
-              <div style="background:rgba(0,255,136,0.08);border:1px solid rgba(0,255,136,0.2);border-radius:8px;padding:10px 14px">
-                <div style="font-size:12px;color:var(--muted);margin-bottom:4px">Chữ thường</div>
-                <div style="font-family:'JetBrains Mono',monospace;font-size:13px">
-                  <span class="tag">'a'</span> <span style="color:var(--muted)">≤ i ≤</span> <span class="tag">'z'</span>
-                  <span style="color:var(--muted);font-size:11px;margin-left:6px">(97–122)</span>
-                </div>
-              </div>
-              <div style="text-align:center;color:var(--muted);font-size:13px">hoặc (or)</div>
-              <div style="background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);border-radius:8px;padding:10px 14px">
-                <div style="font-size:12px;color:var(--muted);margin-bottom:4px">Chữ hoa</div>
-                <div style="font-family:'JetBrains Mono',monospace;font-size:13px">
-                  <span class="tag">'A'</span> <span style="color:var(--muted)">≤ i ≤</span> <span class="tag">'Z'</span>
-                  <span style="color:var(--muted);font-size:11px;margin-left:6px">(65–90)</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div>
-          <div class="card" style="margin-bottom:16px">
-            <h4 style="color:var(--pink)">Minh Họa</h4>
-            <p style="font-size:13px;margin-bottom:10px">Xâu: <span class="tag" style="color:var(--yellow)">"Hi9!"</span></p>
-            <div style="display:flex;flex-direction:column;gap:8px">
-              <div style="display:flex;align-items:center;gap:10px;background:var(--surface2);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'JetBrains Mono',monospace">
-                <div class="char-box alpha" style="width:32px;height:32px;font-size:14px">H</div>
-                <span style="color:var(--muted)">→ <span style="color:var(--cyan)">'A'≤'H'≤'Z' ✓</span> → tong=1</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;background:var(--surface2);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'JetBrains Mono',monospace">
-                <div class="char-box alpha" style="width:32px;height:32px;font-size:14px">i</div>
-                <span style="color:var(--muted)">→ <span style="color:var(--green)">'a'≤'i'≤'z' ✓</span> → tong=2</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;background:var(--surface2);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'JetBrains Mono',monospace">
-                <div class="char-box digit" style="width:32px;height:32px;font-size:14px">9</div>
-                <span style="color:var(--muted)">→ <span style="color:var(--pink)">Không phải chữ cái ✗</span></span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;background:var(--surface2);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'JetBrains Mono',monospace">
-                <div class="char-box other" style="width:32px;height:32px;font-size:14px">!</div>
-                <span style="color:var(--muted)">→ <span style="color:var(--pink)">Không phải chữ cái ✗</span></span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;background:rgba(0,255,136,0.06);border:1px solid rgba(0,255,136,0.2);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'JetBrains Mono',monospace">
-                <span style="color:var(--green)">return</span> <span style="color:var(--yellow);margin-left:4px">2</span>
-              </div>
-            </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+
+          <div style="background:var(--surface);border:1px solid rgba(0,229,255,0.2);border-left:3px solid var(--cyan);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);margin-bottom:6px">def tongchucai(xau):</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Khai báo hàm tên <span class="tag">tongchucai</span>. Tương tự hàm trước, nhận vào <span class="tag">xau</span> là xâu cần đếm chữ cái.</p>
           </div>
 
-          <div class="card yellow">
-            <h4>Mẹo Nhớ</h4>
-            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:4px">
-              <div style="display:flex;gap:3px">
-                <div class="char-box alpha" style="width:28px;height:28px;font-size:11px">A</div>
-                <div class="char-box alpha" style="width:28px;height:28px;font-size:11px">B</div>
-                <div class="char-box alpha" style="width:28px;height:28px;font-size:9px">...</div>
-                <div class="char-box alpha" style="width:28px;height:28px;font-size:11px">Z</div>
-              </div>
-              <span style="color:var(--muted);font-size:13px">+</span>
-              <div style="display:flex;gap:3px">
-                <div class="char-box alpha" style="width:28px;height:28px;font-size:11px">a</div>
-                <div class="char-box alpha" style="width:28px;height:28px;font-size:11px">b</div>
-                <div class="char-box alpha" style="width:28px;height:28px;font-size:9px">...</div>
-                <div class="char-box alpha" style="width:28px;height:28px;font-size:11px">z</div>
-              </div>
-            </div>
-            <p style="font-size:13px;margin-top:8px;color:var(--muted)">Cần kiểm tra <strong style="color:var(--text)">2 điều kiện</strong> nối bằng <span class="tag">or</span></p>
+          <div style="background:var(--surface);border:1px solid rgba(0,255,136,0.2);border-left:3px solid var(--green);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green);margin-bottom:6px">tong = 0</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Khởi tạo bộ đếm bằng <strong>0</strong>. Mỗi lần tìm thấy chữ cái, biến này sẽ được tăng thêm 1.</p>
           </div>
+
+          <div style="background:var(--surface);border:1px solid rgba(255,215,0,0.2);border-left:3px solid var(--yellow);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--yellow);margin-bottom:6px">for i in xau:</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Duyệt lần lượt từng ký tự trong xâu. Biến <span class="tag">i</span> lần lượt nhận giá trị từng ký tự một.</p>
+          </div>
+
+          <div style="background:var(--surface);border:1px solid rgba(255,77,166,0.2);border-left:3px solid var(--pink);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--pink);margin-bottom:6px">if (i >= 'a' and i <= 'z') or (i >= 'A' and i <= 'Z'):</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Điều kiện gồm <strong>2 vế</strong> nối bằng <span class="tag">or</span>: vế trái kiểm tra <strong>chữ thường</strong> (a–z), vế phải kiểm tra <strong>chữ hoa</strong> (A–Z). Chỉ cần một trong hai đúng là tính.</p>
+          </div>
+
+          <div style="background:var(--surface);border:1px solid rgba(0,255,136,0.2);border-left:3px solid var(--green);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green);margin-bottom:6px">tong = tong + 1</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Ký tự hiện tại là chữ cái → tăng bộ đếm lên 1.</p>
+          </div>
+
+          <div style="background:var(--surface);border:1px solid rgba(0,229,255,0.2);border-left:3px solid var(--cyan);border-radius:8px;padding:12px 16px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);margin-bottom:6px">return tong</div>
+            <p style="font-size:13px;color:var(--text);line-height:1.6">Trả về tổng số chữ cái đã đếm được sau khi duyệt hết toàn bộ xâu.</p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -1032,7 +964,7 @@
       </div>
 
       <div style="margin-top:20px;font-size:14px;color:var(--muted)">
-        Thank You · <span style="color:var(--cyan)">Created by Dương và Vi</span>
+        Cảm ơn đã theo dõi! · <span style="color:var(--cyan)">Python · Xử lý Xâu Ký Tự</span>
       </div>
     </div>
   </div>
